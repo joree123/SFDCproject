@@ -1,0 +1,5 @@
+2023-09-04-22:51:02 INFO  BaseTest: setDriver(): driver cofigured
+2023-09-04-22:51:02 INFO  BaseTest: setDriver(): reporter assigned
+2023-09-04-22:51:02 INFO  BaseTest: setupTest() :loginTestTC01: Test object for reporting is created
+2023-09-04-22:51:05 INFO  BaseTset:tearDown():loginTestTC01 tear down called
+2023-09-04-22:51:06 INFO  BaseTest: removedriver: removed driver
