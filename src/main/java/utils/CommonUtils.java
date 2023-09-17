@@ -22,13 +22,30 @@ import constants.WaitConstants;
 
 public class CommonUtils {
 	
-	public static boolean waitForElement(WebDriver driver,WebElement element)
+	public static boolean waitForElementToBeClickable(WebDriver driver,WebElement element)
 	{
 		boolean isElementVisible=false;
 		WebDriverWait wait=new WebDriverWait(driver,WaitConstants.WAIT_FOR_ELEMENT);
 		try {
 			
 		wait.until(ExpectedConditions.elementToBeClickable(element));
+		isElementVisible=true;
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return isElementVisible;
+	}
+	
+	public static boolean waitForElementToBeVisible(WebDriver driver,WebElement element)
+	{
+		boolean isElementVisible=false;
+		WebDriverWait wait=new WebDriverWait(driver,WaitConstants.WAIT_FOR_ELEMENT);
+		try {
+			
+		wait.until(ExpectedConditions.visibilityOf(element));
 		isElementVisible=true;
 		
 		}

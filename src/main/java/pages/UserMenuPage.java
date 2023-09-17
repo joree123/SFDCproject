@@ -1,7 +1,9 @@
 package pages;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +32,13 @@ public class UserMenuPage extends BasePage {
 
 	}
 
-	@FindBy(id = "userNavButton")
+	@FindBy(css = "div#userNavButton span")
 	public WebElement userMenu;
+	
+	@FindBy(id= "userNavLabel")
+	public WebElement userNameText;
+	
+
 
 	@FindBy(xpath = "//div[@id='userNav-menuItems']/a")
 	public List<WebElement> userMenuOptions;
@@ -39,16 +46,16 @@ public class UserMenuPage extends BasePage {
 	@FindBy(xpath = "//a[@title='My Profile']")
 	public WebElement MyProfile;
 
-	@FindBy(id = "userNav-menuItems/a[2]")
+	@FindBy(xpath= "//div[@id='userNav-menuItems']/a[2]")
 	public WebElement MySettings;
 
-	@FindBy(id = "userNav-menuItems/a[3]")
+	@FindBy(xpath= "//div[@id='userNav-menuItems']/a[3]")
 	public WebElement DevelopersConsole;
 
-	@FindBy(id = "userNav-menuItems/a[4]")
+	@FindBy(xpath= "//div[@id='userNav-menuItems']/a[4]")
 	public WebElement SwitchtoLightningExperience;
 
-	@FindBy(id = "userNav-menuItems/a[4]")
+	@FindBy(xpath= "//div[@id='userNav-menuItems']/a[5]")
 	public WebElement Logout;
 
 	// My profile
@@ -67,8 +74,8 @@ public class UserMenuPage extends BasePage {
 	@FindBy(xpath = "//*[@value='Save All']")
 	public WebElement saveAllButton;
 
-	@FindBy(xpath = "//*[@id=\"tailBreadcrumbNode\"]")
-	public WebElement Userprofilepagenamedisplay;
+	@FindBy(xpath = "//*[@id='tailBreadcrumbNode']")
+	public WebElement Userprofilenamedisplay;
 
 	// Postlink
 	@FindBy(css = "#publishereditablearea")
@@ -220,7 +227,14 @@ public class UserMenuPage extends BasePage {
 	@FindBy(id = "progressIcon")
 	public WebElement fileUploadSpinner;
 
-	private boolean profilePageLastNameChanged;
+	public void clickUserMenuButton(WebDriver driver)
+	{
+		CommonUtils.waitForElementToBeClickable(driver, userMenu);
+		if(userMenu.isDisplayed()) {
+			userMenu.click();
+			
+		}
+	}
 
 	/**
 	 * This function can be called to select option from user menu options
@@ -246,7 +260,7 @@ public class UserMenuPage extends BasePage {
 	}
 	
 	
-	public boolean verifyUserMenuItems(WebDriver driver) throws IOException
+	public boolean verifyUserMenuItems() throws IOException
 	{ 
 		boolean verifyItems=false;
 		logger.info("UserMenupage:verifyUsermenuitems(): verifying user menu items started");
@@ -268,7 +282,7 @@ public class UserMenuPage extends BasePage {
 		
 	}
 
-	public boolean selectMyProfileOption(WebDriver driver) {
+	public boolean selectMyProfileOption() {
 		boolean selectMyProfile=false;
 		if(MyProfile.isDisplayed()) {
 			MyProfile.click();
@@ -278,7 +292,7 @@ public class UserMenuPage extends BasePage {
 		return selectMyProfile;
 	}
 	
-	public boolean verifyProfilePageDisplayed(WebDriver driver) {
+	public boolean verifyProfilePageDisplayed() {
 		boolean isDisplayed=false;
 		if(profilePage.isDisplayed())
 		{
@@ -288,7 +302,7 @@ public class UserMenuPage extends BasePage {
 		return isDisplayed;
 	}
 		
-	public void selectEditContactButton(WebDriver driver) {
+	public void selectEditContactButton() {
 		
 		if(editContactButton.isEnabled())
 		{
@@ -298,7 +312,7 @@ public class UserMenuPage extends BasePage {
 	   
 	public boolean isDisplayedEditProfilePopUp(WebDriver driver) {
 		boolean isDisplayed=false;
-		CommonUtils.waitForElement(driver,iframeAboutTab );
+		CommonUtils.waitForElementToBeClickable(driver,iframeAboutTab );
 		if(iframeAboutTab.isDisplayed()) {
 			driver.switchTo().frame(iframeAboutTab);
 			if(Abouttab.isDisplayed() && contactTab.isDisplayed())
@@ -324,9 +338,9 @@ public class UserMenuPage extends BasePage {
 		 
 		 }
 		 driver.switchTo().defaultContent();
-		 if(Userprofilepagenamedisplay.isDisplayed())
+		 if(Userprofilenamedisplay.isDisplayed())
 		 {
-			 if(Userprofilepagenamedisplay.getText().contains(sLastName)) {
+			 if(Userprofilenamedisplay.getText().contains(sLastName)) {
 				 isVerified=true;
 				 logger.info("UserMenuPage:verifyProfilePageLastNamechanged():last name changed");
 			 }
@@ -356,10 +370,10 @@ public boolean verifyFileUpload( WebDriver driver,String sFilepath) {
 	boolean isUploaded=false;
 	if(filelink.isDisplayed()) {
 		filelink.click();
-		if(CommonUtils.waitForElement(driver, Uploadfile)) {
+		if(CommonUtils.waitForElementToBeClickable(driver, Uploadfile)) {
 		Uploadfile.click();
 		}
-		if(CommonUtils.waitForElement(driver, Fileopen)) {
+		if(CommonUtils.waitForElementToBeClickable(driver, Fileopen)) {
 			
 		Fileopen.sendKeys(sFilepath);
 		shareButton.click();
@@ -369,6 +383,8 @@ public boolean verifyFileUpload( WebDriver driver,String sFilepath) {
 		{
 			if(verifyFilePostElement.isDisplayed())
 			{
+				
+				
 				isUploaded=true;
 			}
 		}
@@ -389,7 +405,7 @@ public boolean verifyPhotoUpload(WebDriver driver,String sImageFilePath) {
 	clickOnUpdatePhotoButton(driver);
 	if(photoUploadIframe.isDisplayed()) {
 		driver.switchTo().frame(photoUploadIframe);
-		if(CommonUtils.waitForElement(driver, uploadphoto))
+		if(CommonUtils.waitForElementToBeClickable(driver, uploadphoto))
 		{
 			uploadphoto.sendKeys(sImageFilePath);
 			photoSaveButton.click();
@@ -398,7 +414,7 @@ public boolean verifyPhotoUpload(WebDriver driver,String sImageFilePath) {
 	}
 	
 	if((CommonUtils.waitForElementToDisappear(driver, spinnerIcon)) 
-			&& (CommonUtils.waitForElement(driver, photoSaveButton2)))
+			&& (CommonUtils.waitForElementToBeClickable(driver, photoSaveButton2)))
 			{
 		photoSaveButton2.click();
 			}
@@ -406,7 +422,52 @@ public boolean verifyPhotoUpload(WebDriver driver,String sImageFilePath) {
 	isPhotoUploaded=true;
 	return isPhotoUploaded;
 }
+
+public void openDeveloperConsole() {
+	if(DevelopersConsole.isDisplayed())
+	{
+		DevelopersConsole.click();
+	}
 	
+}
+public boolean verifyDeveloperConsoleWindow(WebDriver driver) {
+	boolean isVerified=false;
+	Set<String> s=driver.getWindowHandles();
+	Iterator<String> is=s.iterator();
+	String parentWindow=is.next();
+	String childWindow=is.next();
+	driver.switchTo().window(childWindow);
+	if(driver.getTitle().equalsIgnoreCase("Developer Console"))
+	{
+		isVerified=true;
+	}
+	return isVerified;
+
+	
+}
+public void closeWindow(WebDriver driver) {
+	driver.close();
+}
+	
+public boolean verifyDisplayOfLoginPage(WebDriver driver) {
+	boolean isDisplayed=false;
+	if(driver.getTitle().equalsIgnoreCase("Login | Salesforce"))
+	{
+		isDisplayed=true;
+	}
+	return isDisplayed;
+}
+
+
+ public void clickLogoutButton(WebDriver driver)
+ {
+	 if(CommonUtils.waitForElementToBeClickable(driver, Logout)) {
+			
+			Logout.click();
+			
+			}
+	 
+ }
 }
 
 

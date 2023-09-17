@@ -8,8 +8,8 @@
           <include name="setupTest"/>
           <include name="tearDown"/>
           <include name="removeDriver"/>
-          <include name="userMenuDropDown_TC06"/>
           <include name="setDriver"/>
+          <include name="userMenuTestTC07"/>
         </methods>
       </class> <!-- tests.UserMenuTest -->
     </classes>

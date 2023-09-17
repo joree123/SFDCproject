@@ -42,7 +42,50 @@ public class HomePage {
 	@FindBy(xpath= "//td[text()='End']/following-sibling::td")
 	public WebElement endTimeDisplayWindow;
 	
+	public boolean verifyDisplayOfHomePage(WebDriver driver)
+	{
+		boolean isDisplayed=false;
+		String title=driver.getTitle();
+		if(title.equalsIgnoreCase("Salesforce - Developer Edition"))
+				{
+			isDisplayed=true;
+				}
+		return isDisplayed;
+	}
 	
+	public boolean verifyDisplayOfFirstAndLastNameLink(WebDriver driver)
+	{
+		boolean isDisplayed=false;
+		if(firstAndLastNameLink.isDisplayed())
+		{
+			isDisplayed=true;
+		}
+		
+		return isDisplayed;
+	}
+	public boolean verifyDisplayOfMyProfilePage(WebDriver driver)
+	{
+		boolean isDisplayed=false;
+		String title=driver.getTitle();
+		UserMenuPage ump=new UserMenuPage(driver);
+		ump.userMenu.click();
+		ump.MyProfile.click();
+		String title1=driver.getTitle();
+		if(title.equals(title1))
+		{
+			isDisplayed=true;
+		}
+		return isDisplayed;
+	}
 	
-	
+	public boolean verifyLastNameChangedOnUserMenu(WebDriver driver,String sname)
+	{
+		boolean isVerified=false;
+		UserMenuPage ump=new UserMenuPage(driver);
+		if(ump.userMenu.getText().contains(sname))
+				{
+			isVerified=true;
+				}
+		return isVerified;
+	}
 }

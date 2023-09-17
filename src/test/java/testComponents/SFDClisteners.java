@@ -22,16 +22,16 @@ public class SFDClisteners extends BaseTest implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-	BaseTest.test.pass(MarkupHelper.createLabel(result.getMethod().getMethodName()+" passed",ExtentColor.GREEN));
+	BaseTest.getTest().pass(MarkupHelper.createLabel(result.getMethod().getMethodName()+" passed",ExtentColor.GREEN));
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 	WebDriver driver=BaseTest.getDriver();	
-	BaseTest.test.fail(MarkupHelper.createLabel(result.getMethod().getMethodName()+ " Failed",ExtentColor.RED));	
+	BaseTest.getTest().fail(MarkupHelper.createLabel(result.getMethod().getMethodName()+ " Failed",ExtentColor.RED));	
 	try {
-		BaseTest.test.addScreenCaptureFromPath(CommonUtils.getScreenshot(driver));
+		BaseTest.getTest().addScreenCaptureFromPath(CommonUtils.getScreenshot(driver));
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

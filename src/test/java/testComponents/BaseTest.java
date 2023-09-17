@@ -1,6 +1,7 @@
 package testComponents;
 
 import java.lang.reflect.Method;
+import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,6 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -31,23 +33,25 @@ public class BaseTest {
 //	Proper reporting - Accurate Assertion, Screenshots
 //	Support of Logs in the framework
 	
-	public static ThreadLocal<WebDriver> threadLocalDriver=new ThreadLocal<>(); 
+	private static ThreadLocal<WebDriver> threadLocalDriver=new ThreadLocal<>(); 
 	public static Logger logger=LogManager.getLogger();
-	public static ExtentReports extent=new ExtentReports();
+	static ExtentReports extent=new ExtentReports();
 	static ExtentSparkReporter reporter;
-	public static ExtentTest test;
+	static ExtentTest test=null;
+	static ThreadLocal<ExtentTest> threadLocaltest= new ThreadLocal<>();
 	
 	
 	/**This method setDriver() configures the driver
 	 * and cofigures the extentreport for the tests
 	 */
+	@Parameters({"browser","headless"})
 	@BeforeTest
 	public static void setDriver() {
 		WebDriver driver=getBrowserType("chrome",false);
+		
 		logger.info("BaseTest: setDriver(): driver cofigured");
 		threadLocalDriver.set(driver);
-		reporter=new ExtentSparkReporter(FileConstants.REPORT_PATH);
-		extent.attachReporter(reporter);
+				
 		logger.info("BaseTest: setDriver(): reporter assigned");
 	}
 	
@@ -55,11 +59,24 @@ public class BaseTest {
 	public static WebDriver getDriver() {
 		return threadLocalDriver.get();
 	}
+	
+	
 	@BeforeMethod
 	public static void setupTest(Method method)
 	{
+		
+		reporter=new ExtentSparkReporter(FileConstants.REPORT_PATH);
+		extent.attachReporter(reporter);
 		test =extent.createTest(method.getName());
+		threadLocaltest.set(test);
 		logger .info("BaseTest: setupTest() :"+method.getName()+": Test object for reporting is created");
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
+	
+	}
+	
+	public static ExtentTest getTest() {
+		return threadLocaltest.get();
 	}
 	@AfterMethod
 	public static void tearDown(Method method)
@@ -89,22 +106,28 @@ public class BaseTest {
 			ChromeOptions co =new ChromeOptions();
 			co.addArguments("--headless");
 			driver=new ChromeDriver(co);
+			logger.info("BaseTest : getBrowserType : chrome headless driver configured");
 			break;
 			}
 			else
 			{
 				driver=new ChromeDriver();
+				logger.info("BaseTest : getBrowserType : chrome driver configured");
 				break;
 			}
 		case "firefox":
 			driver=new FirefoxDriver();
+			logger.info("BaseTest : getBrowserType : firefox driver configured");
 			break;
 		case "safari":
 			driver=new SafariDriver();
+			logger.info("BaseTest : getBrowserType : Safari driver configured");
 		case "edge":
 			driver=new EdgeDriver();
+			logger.info("BaseTest : getBrowserType : Edge driver configured");
 		default:
 			driver=null;
+			logger.fatal("BaseTest : getBrowserType : Incorrect browser name supplied");
 			break;
 				
 		}
