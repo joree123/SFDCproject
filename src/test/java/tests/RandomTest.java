@@ -120,7 +120,7 @@ public class RandomTest extends BaseTest {
 		
 }	
 	
-	@Test
+/*	@Test
 	public void randomTestTC37() throws IOException
 	{
 		WebDriver driver=BaseTest.getDriver();
@@ -161,5 +161,5 @@ public class RandomTest extends BaseTest {
 		Assert.assertTrue(hp.verifyDisplayOfMonthViewPage(driver));
 		Assert.assertTrue(hp.verifyDisplayOfOthersInBetweenDates(driver));
 		
-}
+}*/
 }

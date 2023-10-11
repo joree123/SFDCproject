@@ -2681,3 +2681,105 @@
 2023-09-14-08:50:39 INFO  MySettingsPage: verifyDisplayAndLayoutLink:add button clicked
 2023-09-14-08:51:18 INFO  BaseTset:tearDown():userMenuTestTC07 tear down called
 2023-09-14-08:51:19 INFO  BaseTest: removedriver: removed driver
+2023-09-19-15:39:55 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-09-19-15:39:55 INFO  BaseTest: setDriver(): driver cofigured
+2023-09-19-15:39:55 INFO  BaseTest: setDriver(): reporter assigned
+2023-09-19-15:39:55 INFO  BaseTest: setupTest() :LoginTestTC03: Test object for reporting is created
+2023-09-19-15:39:56 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:39:56 INFO  LoginTest:TC03: launched client URL
+2023-09-19-15:39:57 INFO  LoginTest:TC03: user name entered
+2023-09-19-15:39:57 INFO  LoginTest:TC03: password entered
+2023-09-19-15:39:57 INFO  LoginPage: selectRemeberMeCheckbox():started 
+2023-09-19-15:39:57 INFO  LoginPage: selectRemeberMeCheckbox():checkbox selected
+2023-09-19-15:39:57 INFO  LoginPage: selectRemeberMeCheckbox():ended
+2023-09-19-15:40:05 INFO  LoginPage:VerifyDisplayOfHomePage(): Home page is displayed
+2023-09-19-15:40:05 INFO  LoginTest:TC03: home page displayed
+2023-09-19-15:40:08 INFO  LoginPage: logoutOfSfdc(): logout button clicked
+2023-09-19-15:40:10 INFO  LoginTest:TC03:username displayed in username field
+2023-09-19-15:40:10 INFO  BaseTset:tearDown():LoginTestTC03 tear down called
+2023-09-19-15:40:10 INFO  BaseTest: setupTest() :LoginTestTC04A: Test object for reporting is created
+2023-09-19-15:40:10 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:40:10 INFO  LoginTest:TC04A: launched client URL
+2023-09-19-15:40:41 INFO  BaseTset:tearDown():LoginTestTC04A tear down called
+2023-09-19-15:40:41 INFO  BaseTest: setupTest() :LoginTestTC04b: Test object for reporting is created
+2023-09-19-15:40:41 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:40:41 INFO  LoginTest:TC04A: launched client URL
+2023-09-19-15:40:48 INFO  BaseTset:tearDown():LoginTestTC04b tear down called
+2023-09-19-15:40:48 INFO  BaseTest: setupTest() :loginTestTC01: Test object for reporting is created
+2023-09-19-15:40:48 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:40:48 INFO  LoginTest:TC01: launched client URL
+2023-09-19-15:40:55 INFO  BaseTset:tearDown():loginTestTC01 tear down called
+2023-09-19-15:40:55 INFO  BaseTest: setupTest() :loginTestTC02: Test object for reporting is created
+2023-09-19-15:40:55 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:40:55 INFO  Loginpage: loginToUrl: driver maximized
+2023-09-19-15:41:56 INFO  BaseTset:tearDown():loginTestTC02 tear down called
+2023-09-19-15:41:59 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-09-19-15:41:59 INFO  BaseTest: setDriver(): driver cofigured
+2023-09-19-15:41:59 INFO  BaseTest: setDriver(): reporter assigned
+2023-09-19-15:41:59 INFO  BaseTest: setupTest() :UserMenuTestTC08: Test object for reporting is created
+2023-09-19-15:42:02 INFO  LoginPage: launchUrl: url lauched
+2023-09-19-15:42:02 INFO  Loginpage: loginToUrl: driver maximized
+2023-09-19-15:42:02 INFO  LoginPage: loginToUrl:username and Password entered
+2023-09-19-15:42:03 INFO  LoginPage: loginToUrl: loginButton clicked
+2023-09-19-15:42:09 INFO  UserMenupage:verifyUsermenuitems(): verifying user menu items started
+2023-09-19-15:42:12 INFO  BaseTset:tearDown():UserMenuTestTC08 tear down called
+2023-09-19-15:42:12 INFO  BaseTest: setupTest() :UsermenuTestTC09: Test object for reporting is created
+2023-10-07-13:57:53 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-10-07-13:57:53 INFO  BaseTest: setDriver(): driver cofigured
+2023-10-07-13:57:53 INFO  BaseTest: setDriver(): reporter assigned
+2023-10-07-13:57:53 INFO  BaseTest: setupTest() :LoginTestTC03: Test object for reporting is created
+2023-10-07-13:57:55 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-13:57:55 INFO  LoginTest:TC03: launched client URL
+2023-10-07-13:57:55 INFO  LoginTest:TC03: user name entered
+2023-10-07-13:57:55 INFO  LoginTest:TC03: password entered
+2023-10-07-13:57:55 INFO  LoginPage: selectRemeberMeCheckbox():started 
+2023-10-07-13:57:56 INFO  LoginPage: selectRemeberMeCheckbox():checkbox selected
+2023-10-07-13:57:56 INFO  LoginPage: selectRemeberMeCheckbox():ended
+2023-10-07-13:58:05 INFO  LoginPage:VerifyDisplayOfHomePage(): Home page is displayed
+2023-10-07-13:58:05 INFO  LoginTest:TC03: home page displayed
+2023-10-07-13:58:07 INFO  LoginPage: logoutOfSfdc(): logout button clicked
+2023-10-07-13:58:09 INFO  LoginTest:TC03:username displayed in username field
+2023-10-07-13:58:09 INFO  BaseTset:tearDown():LoginTestTC03 tear down called
+2023-10-07-13:58:09 INFO  BaseTest: setupTest() :LoginTestTC04A: Test object for reporting is created
+2023-10-07-13:58:09 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-13:58:09 INFO  LoginTest:TC04A: launched client URL
+2023-10-07-13:58:41 INFO  BaseTset:tearDown():LoginTestTC04A tear down called
+2023-10-07-13:58:41 INFO  BaseTest: setupTest() :LoginTestTC04b: Test object for reporting is created
+2023-10-07-13:58:41 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-13:58:41 INFO  LoginTest:TC04A: launched client URL
+2023-10-07-13:58:48 INFO  BaseTset:tearDown():LoginTestTC04b tear down called
+2023-10-07-13:58:48 INFO  BaseTest: setupTest() :loginTestTC01: Test object for reporting is created
+2023-10-07-13:58:48 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-13:58:48 INFO  LoginTest:TC01: launched client URL
+2023-10-07-13:58:55 INFO  BaseTset:tearDown():loginTestTC01 tear down called
+2023-10-07-13:58:55 INFO  BaseTest: setupTest() :loginTestTC02: Test object for reporting is created
+2023-10-07-13:58:55 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-13:58:55 INFO  Loginpage: loginToUrl: driver maximized
+2023-10-07-14:00:04 INFO  BaseTset:tearDown():loginTestTC02 tear down called
+2023-10-07-14:00:07 INFO  BaseTest: removedriver: removed driver
+2023-10-07-14:00:10 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-10-07-14:00:10 INFO  BaseTest: setDriver(): driver cofigured
+2023-10-07-14:00:10 INFO  BaseTest: setDriver(): reporter assigned
+2023-10-07-14:00:10 INFO  BaseTest: setupTest() :UserMenuTestTC08: Test object for reporting is created
+2023-10-07-14:00:13 INFO  LoginPage: launchUrl: url lauched
+2023-10-07-14:00:13 INFO  Loginpage: loginToUrl: driver maximized
+2023-10-07-14:00:14 INFO  LoginPage: loginToUrl:username and Password entered
+2023-10-07-14:00:14 INFO  LoginPage: loginToUrl: loginButton clicked
+2023-10-07-14:00:21 INFO  UserMenupage:verifyUsermenuitems(): verifying user menu items started
+2023-10-07-14:00:26 INFO  BaseTset:tearDown():UserMenuTestTC08 tear down called
+2023-10-07-14:00:26 INFO  BaseTest: setupTest() :UsermenuTestTC09: Test object for reporting is created
+2023-10-10-10:24:24 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-10-10-10:24:24 INFO  BaseTest: setDriver(): driver cofigured
+2023-10-10-10:24:24 INFO  BaseTest: setDriver(): reporter assigned
+2023-10-10-10:24:24 INFO  BaseTest: setupTest() :accountTestTC10: Test object for reporting is created
+2023-10-10-10:24:27 INFO  LoginPage: launchUrl: url lauched
+2023-10-10-10:24:27 INFO  Loginpage: loginToUrl: driver maximized
+2023-10-10-10:24:28 INFO  LoginPage: loginToUrl:username and Password entered
+2023-10-10-10:24:31 INFO  LoginPage: loginToUrl: loginButton clicked
+2023-10-10-10:24:31 INFO  AccountTest: AccountTestTC10: Logged in to SalesForce
+2023-10-10-10:24:43 INFO  LoginPage:VerifyDisplayOfHomePage(): Home page is displayed
+2023-10-10-10:24:54 INFO  AccountTest: AccountTestTC10:Verified display of Account page 
+2023-10-10-10:25:03 INFO  AccountTest: AccountTestTC10():new account is created 
+2023-10-10-10:25:03 INFO  AccountTest: AccountTestTC10:Verified display of new account page 
+2023-10-10-10:25:03 INFO  BaseTset:tearDown():accountTestTC10 tear down called
+2023-10-10-10:25:05 INFO  BaseTest: removedriver: removed driver
