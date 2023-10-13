@@ -2,16 +2,16 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-10T10:24:15 PDT" name="Default suite" finished-at="2023-10-10T10:25:05 PDT" duration-ms="49672">
+  <suite started-at="2023-10-12T09:24:43 PDT" name="Default suite" finished-at="2023-10-12T09:25:17 PDT" duration-ms="33097">
     <groups>
     </groups>
-    <test started-at="2023-10-10T10:24:15 PDT" name="Default test" finished-at="2023-10-10T10:25:05 PDT" duration-ms="49672">
+    <test started-at="2023-10-12T09:24:43 PDT" name="Default test" finished-at="2023-10-12T09:25:17 PDT" duration-ms="33097">
       <class name="tests.AccountsTest">
-        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-10T10:24:15 PDT" name="setDriver" finished-at="2023-10-10T10:24:24 PDT" duration-ms="8419" status="PASS">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-12T09:24:43 PDT" name="setDriver" finished-at="2023-10-12T09:24:53 PDT" duration-ms="9222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-10T10:24:24 PDT" name="setupTest" finished-at="2023-10-10T10:24:25 PDT" duration-ms="668" status="PASS">
+        <test-method is-config="true" signature="setupTest(java.lang.reflect.Method)[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-12T09:24:53 PDT" name="setupTest" finished-at="2023-10-12T09:24:53 PDT" duration-ms="519" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="accountTestTC10()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-10T10:24:25 PDT" name="accountTestTC10" finished-at="2023-10-10T10:25:03 PDT" duration-ms="38434" status="PASS">
+        <test-method signature="accountTestTC10()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-12T09:24:53 PDT" name="accountTestTC10" finished-at="2023-10-12T09:25:15 PDT" duration-ms="22067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountTestTC10 -->
-        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-10T10:25:03 PDT" name="tearDown" finished-at="2023-10-10T10:25:03 PDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-12T09:25:15 PDT" name="tearDown" finished-at="2023-10-12T09:25:15 PDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="removeDriver()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-10T10:25:03 PDT" name="removeDriver" finished-at="2023-10-10T10:25:05 PDT" duration-ms="2050" status="PASS">
+        <test-method is-config="true" signature="removeDriver()[pri:0, instance:tests.AccountsTest@19fb8826]" started-at="2023-10-12T09:25:15 PDT" name="removeDriver" finished-at="2023-10-12T09:25:17 PDT" duration-ms="1207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeDriver -->

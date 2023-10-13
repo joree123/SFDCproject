@@ -2783,3 +2783,18 @@
 2023-10-10-10:25:03 INFO  AccountTest: AccountTestTC10:Verified display of new account page 
 2023-10-10-10:25:03 INFO  BaseTset:tearDown():accountTestTC10 tear down called
 2023-10-10-10:25:05 INFO  BaseTest: removedriver: removed driver
+2023-10-12-09:24:53 INFO  BaseTest : getBrowserType : chrome driver configured
+2023-10-12-09:24:53 INFO  BaseTest: setDriver(): driver cofigured
+2023-10-12-09:24:53 INFO  BaseTest: setDriver(): reporter assigned
+2023-10-12-09:24:53 INFO  BaseTest: setupTest() :accountTestTC10: Test object for reporting is created
+2023-10-12-09:24:54 INFO  LoginPage: launchUrl: url lauched
+2023-10-12-09:24:54 INFO  Loginpage: loginToUrl: driver maximized
+2023-10-12-09:24:56 INFO  LoginPage: loginToUrl:username and Password entered
+2023-10-12-09:25:00 INFO  LoginPage: loginToUrl: loginButton clicked
+2023-10-12-09:25:00 INFO  AccountTest: AccountTestTC10: Logged in to SalesForce
+2023-10-12-09:25:04 INFO  LoginPage:VerifyDisplayOfHomePage(): Home page is displayed
+2023-10-12-09:25:09 INFO  AccountTest: AccountTestTC10:Verified display of Account page 
+2023-10-12-09:25:15 INFO  AccountTest: AccountTestTC10():new account is created 
+2023-10-12-09:25:15 INFO  AccountTest: AccountTestTC10:Verified display of new account page 
+2023-10-12-09:25:15 INFO  BaseTset:tearDown():accountTestTC10 tear down called
+2023-10-12-09:25:17 INFO  BaseTest: removedriver: removed driver
